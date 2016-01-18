@@ -6,7 +6,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'output'),
     publicPath: 'output/',
-    filename: "main.js"
+    filename: "main.js",
+    chunkFilename: 'js/[hash]/[id].js'
   },
   // plugins: [ new webpack.optimize.CommonsChunkPlugin() ],
   module: {

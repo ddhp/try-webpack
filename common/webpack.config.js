@@ -8,7 +8,8 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'output'),
-    filename: '[name].js'
+    filename: '[name].js',
+    chunkFilename: 'js/[hash]/[id].js'
   },
   plugins: [
     new CommonsChunkPlugin({
