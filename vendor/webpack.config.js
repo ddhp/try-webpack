@@ -1,5 +1,6 @@
 var path = require('path');
 var CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
+var UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 
 module.exports = {
   entry: {
@@ -14,6 +15,7 @@ module.exports = {
   plugins: [
     new CommonsChunkPlugin({
       name: 'vendor'
-    })
+    }),
+    new UglifyJsPlugin({ minimize: true })
   ]
 };
